@@ -11,7 +11,7 @@ Here is a summary of my progress at CPP-Modules:
     <th>Status</th>
   </tr>
   <tr>
-    <td><b><a href="https://github.com/Gomeskk/CPP-Modules">CPP-Module00</a></b></td>
+    <td><b><a href="https://github.com/Gomeskk/CPP-Modules/tree/main/CPP-Module00">CPP-Module00</a></b></td>
     <td>[Namespaces] [IO Stream] [Basic OOP Syntax and Concepts]</td>
     <td>Progressing</td>
   </tr>
