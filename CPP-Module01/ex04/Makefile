@@ -13,7 +13,7 @@ MAGENTA = \033[35m
 # Variables
 CXX = c++
 CXXFLAGS = -std=c++98
-NAME = account
+NAME = Sed_is_for_losers
 OBJ_DIR = objs
 
 SRCS = $(wildcard *.cpp)

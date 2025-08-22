@@ -13,7 +13,7 @@ MAGENTA = \033[35m
 # Variables
 CXX = c++
 CXXFLAGS = -std=c++98
-NAME = account
+NAME = Unnecessary_violence
 OBJ_DIR = objs
 
 SRCS = $(wildcard *.cpp)

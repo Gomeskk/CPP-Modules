@@ -13,7 +13,7 @@ MAGENTA = \033[35m
 # Variables
 CXX = c++
 CXXFLAGS = -std=c++98
-NAME = account
+NAME = Harl_2.0
 OBJ_DIR = objs
 
 SRCS = $(wildcard *.cpp)
