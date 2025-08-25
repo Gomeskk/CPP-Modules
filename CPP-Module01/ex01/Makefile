@@ -13,7 +13,7 @@ MAGENTA = \033[35m
 # Variables
 CXX = c++
 CXXFLAGS = -std=c++98
-NAME = Moar_brainz!
+NAME = Moar_brainz
 OBJ_DIR = objs
 
 SRCS = $(wildcard *.cpp)
