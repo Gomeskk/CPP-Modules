@@ -21,7 +21,7 @@ private:
     std::string name;
 
 public:
-    Zombie();                   // Default constructor needed for array allocation
+    Zombie();                   // default constructor needed for array allocation
     Zombie(std::string name);   // named constructor
     ~Zombie();                  // destructor
     
