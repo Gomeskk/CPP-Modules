@@ -31,7 +31,7 @@ int main() {
         
         // try to convert the input to a number
         std::istringstream iss(input);
-        if (iss >> hordeSize) {
+        if (iss >> hordeSize && iss.eof()) {  // Check that the entire input was consumed
             validInput = true;
         } 
         else if (std::cin.eof()) {
