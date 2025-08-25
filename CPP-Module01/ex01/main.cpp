@@ -1,4 +1,8 @@
 #include "Zombie.hpp"
+#include <iostream>
+#include <string>
+#include <limits>
+#include <sstream>
 
 int main() {
     std::cout << BOLD << CYAN << "===== ZOMBIE HORDE CREATOR PROGRAM =====" << RESET << std::endl;
@@ -13,12 +17,30 @@ int main() {
         std::cout << RED << "\nInput error or EOF detected. Exiting program." << RESET << std::endl;
         return 1;
     }
+    // check if name is empty (just pressed Enter)
+    if (baseName.empty()) {
+        std::cout << YELLOW << "Empty name not allowed. Using 'DefaultZombie' instead." << RESET << std::endl;
+        baseName = "DefaultZombie";
+    }
     
-    std::cout << "Enter number of zombies to create: ";
-    std::cin >> hordeSize;
-    if (!std::cin) {
-        std::cout << RED << "\nInput error or EOF detected. Exiting program." << RESET << std::endl;
-        return 1;
+    bool validInput = false;
+    while (!validInput) {
+        std::string input;
+        std::cout << "Enter number of zombies to create: ";
+        std::getline(std::cin, input);
+        
+        // try to convert the input to a number
+        std::istringstream iss(input);
+        if (iss >> hordeSize) {
+            validInput = true;
+        } 
+        else if (std::cin.eof()) {
+            std::cout << RED << "EOF detected. Exiting program." << RESET << std::endl;
+            return 1;
+        } 
+        else {
+            std::cout << RED << "Invalid input. Please enter a number." << RESET << std::endl;
+        }
     }
     
     if (hordeSize <= 0) {
@@ -34,9 +56,7 @@ int main() {
     
     // make each zombie announce itself
     for (int i = 0; i < hordeSize; i++) {
-        std::ostringstream oss;
-        oss << "Zombie " << (i + 1) << " of " << hordeSize << ": ";
-        std::cout << CYAN << oss.str() << RESET;
+        std::cout << CYAN << "Zombie " << (i + 1) << " of " << hordeSize << ": " << RESET;
         horde[i].announce();
     }
     
