@@ -12,9 +12,17 @@ int main()
     
     std::cout << "Enter a name for heap zombie: ";
     std::getline(std::cin, heapName);
+    if (!std::cin) {
+        std::cout << RED << "\nInput error or EOF detected. Exiting program." << RESET << std::endl;
+        return 1;
+    }
     
     std::cout << "Enter a name for stack zombie: ";
     std::getline(std::cin, stackName);
+    if (!std::cin) {
+        std::cout << RED << "\nInput error or EOF detected. Exiting program." << RESET << std::endl;
+        return 1;
+    }
     
     std::cout << std::endl << BOLD << GREEN << "----- Creating heap zombie -----" << RESET << std::endl;
     std::cout << GREEN << "(This zombie will persist until manually deleted)" << RESET << std::endl;
@@ -30,6 +38,7 @@ int main()
     heapZombie->announce();
     
     std::cout << std::endl << BOLD << RED << "----- Manually deleting heap zombie -----" << RESET << std::endl;
+    
     delete heapZombie;
     
     std::cout << std::endl << BOLD << CYAN << "All zombies have returned to their graves. Program ending." << RESET << std::endl;
