@@ -4,9 +4,12 @@
 #include <limits>
 #include <sstream>
 
+#define MAX_ZOMBIES 50000
+
 int main() {
     std::cout << BOLD << CYAN << "===== ZOMBIE HORDE CREATOR PROGRAM =====" << RESET << std::endl;
-    std::cout << "This program demonstrates creating multiple zombies in a single allocation" << std::endl << std::endl;
+    std::cout << "This program demonstrates creating multiple zombies in a single allocation" << std::endl;
+    std::cout << YELLOW << "(Maximum zombie limit: " << MAX_ZOMBIES << ")" << RESET << std::endl << std::endl;
     
     std::string baseName;
     int hordeSize;
@@ -32,7 +35,15 @@ int main() {
         // try to convert the input to a number
         std::istringstream iss(input);
         if (iss >> hordeSize && iss.eof()) {  // Check that the entire input was consumed
-            validInput = true;
+            if (hordeSize <= 0) {
+                std::cout << RED << "Invalid horde size! Must be greater than 0." << RESET << std::endl;
+            }
+            else if (hordeSize > MAX_ZOMBIES) {
+                std::cout << RED << "Too many zombies requested! Maximum limit is " << MAX_ZOMBIES << "." << RESET << std::endl;
+            }
+            else {
+                validInput = true;
+            }
         } 
         else if (std::cin.eof()) {
             std::cout << RED << "EOF detected. Exiting program." << RESET << std::endl;
@@ -41,11 +52,6 @@ int main() {
         else {
             std::cout << RED << "Invalid input. Please enter a number." << RESET << std::endl;
         }
-    }
-    
-    if (hordeSize <= 0) {
-        std::cout << RED << "Invalid horde size! Must be greater than 0." << RESET << std::endl;
-        return 1;
     }
     
     std::cout << std::endl << BOLD << GREEN << "----- Creating zombie horde -----" << RESET << std::endl;
