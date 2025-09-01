@@ -13,10 +13,10 @@ MAGENTA = \033[35m
 # Variables
 CXX = c++
 CXXFLAGS = -std=c++98
-NAME = Harl_filter
+NAME = harlFilter
 OBJ_DIR = objs
 
-SRCS = $(wildcard *.cpp)
+SRCS = main.cpp Harl.cpp
 OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Rules

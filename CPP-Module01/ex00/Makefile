@@ -16,7 +16,7 @@ CXXFLAGS = -std=c++98
 NAME = BraiiiiiiinnnzzzZ
 OBJ_DIR = objs
 
-SRCS = $(wildcard *.cpp)
+SRCS = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Rules

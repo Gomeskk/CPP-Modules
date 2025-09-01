@@ -16,7 +16,7 @@ CXXFLAGS = -std=c++98
 NAME = HI_THIS_IS_BRAIN
 OBJ_DIR = objs
 
-SRCS = $(wildcard *.cpp)
+SRCS = main.cpp
 OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Rules

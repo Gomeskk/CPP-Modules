@@ -16,7 +16,7 @@ CXXFLAGS = -std=c++98
 NAME = Sed_is_for_losers
 OBJ_DIR = objs
 
-SRCS = $(wildcard *.cpp)
+SRCS = FileReplacer.cpp main.cpp
 OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Rules

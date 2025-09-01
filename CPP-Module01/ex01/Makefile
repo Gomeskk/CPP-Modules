@@ -16,7 +16,7 @@ CXXFLAGS = -std=c++98
 NAME = Moar_brainz
 OBJ_DIR = objs
 
-SRCS = $(wildcard *.cpp)
+SRCS = main.cpp Zombie.cpp zombieHorde.cpp
 OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Rules

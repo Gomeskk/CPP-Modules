@@ -16,7 +16,7 @@ CXXFLAGS = -std=c++98
 NAME = Harl_2.0
 OBJ_DIR = objs
 
-SRCS = $(wildcard *.cpp)
+SRCS = Harl.cpp main.cpp
 OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Rules

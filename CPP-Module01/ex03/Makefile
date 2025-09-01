@@ -16,7 +16,7 @@ CXXFLAGS = -std=c++98
 NAME = Unnecessary_violence
 OBJ_DIR = objs
 
-SRCS = $(wildcard *.cpp)
+SRCS = HumanA.cpp HumanB.cpp Weapon.cpp main.cpp
 OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Rules
