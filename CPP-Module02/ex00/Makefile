@@ -1,3 +1,5 @@
+# filepath: /home/gomes/CPP-Modules/CPP-Module02/ex00/Makefile
+
 # Silence all commands unless explicitly printed
 MAKEFLAGS += --silent
 
@@ -13,10 +15,10 @@ MAGENTA = \033[35m
 # Variables
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
-NAME = Polymorphism
+NAME = Fixed
 OBJ_DIR = objs
 
-SRCS = main.cpp Harl.cpp
+SRCS = main.cpp Fixed.cpp
 OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Rules
@@ -47,4 +49,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
-
