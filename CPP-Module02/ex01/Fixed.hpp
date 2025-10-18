@@ -2,7 +2,7 @@
 # define FIXED_HPP
 
 #include <iostream>
-#include <climits>
+#include <cmath>
 
 // ANSI color codes for pretty output
 #define RESET   "\033[0m"
@@ -13,6 +13,7 @@
 #define CYAN    "\033[36m"
 #define MAGENTA "\033[35m"
 #define BLUE    "\033[34m"
+#define PURPLE  "\033[35m"
 
 class Fixed
 {
@@ -26,8 +27,20 @@ public:
     Fixed &operator=(const Fixed &rhs);   // Copy assignment operator
     ~Fixed(void);                         // Destructor
 
+    // ---- New Constructors ----
+    Fixed(const int value);
+    Fixed(const float value);
+
+    // ---- Conversion Methods ----
+    float toFloat(void) const;
+    int toInt(void) const;
+
+    // ---- Member functions ----
     int getRawBits(void) const;           // Returns the raw value
     void setRawBits(int const raw);       // Sets the raw value
 };
+
+// ---- Stream Overload ----
+std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
 
 #endif

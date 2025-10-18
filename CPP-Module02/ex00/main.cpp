@@ -1,9 +1,8 @@
 #include "Fixed.hpp"
 #include <iostream>
 
-int main(int argc, char *argv[]) {
-    // Check if command line arguments were provided
-    if (argc > 1) {
+int main(int argc, char *argv[]){
+    if (argc > 1){
         std::cerr << RED << "⚠ ERROR: This program does not accept command line arguments" << RESET << std::endl;
         std::cerr << YELLOW << "Usage: " << argv[0] << RESET << std::endl;
         return 1;
