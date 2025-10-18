@@ -13,10 +13,10 @@ MAGENTA = \033[35m
 # Variables
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
-NAME = Polymorphism
+NAME = FixedOperators
 OBJ_DIR = objs
 
-SRCS = main.cpp Harl.cpp
+SRCS = main.cpp Fixed.cpp
 OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Rules
