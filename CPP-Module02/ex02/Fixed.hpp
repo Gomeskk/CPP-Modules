@@ -4,7 +4,6 @@
 #include <iostream>
 #include <cmath>
 
-// ANSI color codes for pretty output
 #define RESET   "\033[0m"
 #define BOLD    "\033[1m"
 #define GREEN   "\033[32m"

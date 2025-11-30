@@ -37,9 +37,8 @@ bool bsp(Point const &a, Point const &b, Point const &c, Point const &point){
     Fixed area3 = calculateArea(point, c, a);
     
     // Check if any of the areas are zero (meaning point is on edge or vertex)
-    if (area1 == 0 || area2 == 0 || area3 == 0){
+    if (area1 == 0 || area2 == 0 || area3 == 0)
         return false;
-    }
     
     // Check if the sum of the three areas equals the original area
     // with a small epsilon for floating-point precision issues

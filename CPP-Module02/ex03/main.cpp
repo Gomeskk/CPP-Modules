@@ -3,7 +3,6 @@
 #include <sstream>
 #include <string>
 
-// Function to print test results
 void printResult(bool inside, const char* testName){
     std::cout << "  " << testName << ": ";
     if (inside)
@@ -110,7 +109,6 @@ int main(int argc, char *argv[]){
 
     std::cout << BOLD << "\n===== POINT IN TRIANGLE TESTS =====" << RESET << std::endl;
 
-    // Create triangle vertices
     std::cout << BOLD << "\n1. Creating triangle ABC:" << RESET << std::endl;
     Point a(0, 0);
     Point b(10, 0);
