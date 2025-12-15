@@ -24,7 +24,6 @@ private:
     unsigned int _attackDamage;
 
 public:
-    // ---- Constructors & Destructor ----
     ClapTrap(void);                             // Default constructor
     ClapTrap(const std::string &name);          // Parameterized constructor
     ClapTrap(const ClapTrap &src);              // Copy constructor

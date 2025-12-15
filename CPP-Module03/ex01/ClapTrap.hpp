@@ -24,12 +24,11 @@ protected:
     unsigned int _attackDamage;
 
 public:
-    // ---- Constructors & Destructor ----
-    ClapTrap(void);
-    ClapTrap(const std::string &name);
-    ClapTrap(const ClapTrap &src);
-    ClapTrap &operator=(const ClapTrap &rhs);
-    ~ClapTrap(void);
+    ClapTrap(void);                             // Default constructor
+    ClapTrap(const std::string &name);          // Parameterized constructor
+    ClapTrap(const ClapTrap &src);              // Copy constructor  
+    ClapTrap &operator=(const ClapTrap &rhs);   // Copy assignment operator
+    ~ClapTrap(void);                            // Destructor
 
     // ---- Member Functions ----
     void attack(const std::string &target);

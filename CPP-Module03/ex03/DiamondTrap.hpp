@@ -10,12 +10,11 @@ private:
     std::string _name;
 
 public:
-    // ---- Constructors & Destructor ----
-    DiamondTrap(void);
-    DiamondTrap(const std::string &name);
-    DiamondTrap(const DiamondTrap &src);
-    DiamondTrap &operator=(const DiamondTrap &rhs);
-    ~DiamondTrap(void);
+    DiamondTrap(void);                                  // Default constructor
+    DiamondTrap(const std::string &name);               // Parameterized constructor
+    DiamondTrap(const DiamondTrap &src);                // Copy constructor
+    DiamondTrap &operator=(const DiamondTrap &rhs);     // Copy assignment operator
+    ~DiamondTrap(void);                                 // Destructor
 
     // ---- Member Functions ----
     using ScavTrap::attack;

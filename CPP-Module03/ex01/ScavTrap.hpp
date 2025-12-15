@@ -6,12 +6,11 @@
 class ScavTrap : public ClapTrap
 {
 public:
-    // ---- Constructors & Destructor ----
-    ScavTrap(void);
-    ScavTrap(const std::string &name);
-    ScavTrap(const ScavTrap &src);
-    ScavTrap &operator=(const ScavTrap &rhs);
-    ~ScavTrap(void);
+    ScavTrap(void);                             // Default constructor
+    ScavTrap(const std::string &name);          // Parameterized constructor
+    ScavTrap(const ScavTrap &src);              // Copy constructor
+    ScavTrap &operator=(const ScavTrap &rhs);   // Copy assignment operator
+    ~ScavTrap(void);                            // Destructor
 
     // ---- Member Functions ----
     void attack(const std::string &target);
