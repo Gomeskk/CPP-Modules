@@ -3,16 +3,20 @@
 // ---- Constructors & Destructor ----
 
 DiamondTrap::DiamondTrap(void) : ClapTrap("Default_clap_name"), FragTrap(), ScavTrap(), _name("Default") {
-    this->_hitPoints = FragTrap::_hitPoints;
-    this->_energyPoints = ScavTrap::_energyPoints;
-    this->_attackDamage = FragTrap::_attackDamage;
+    FragTrap frag;
+    ScavTrap scav;
+    this->_hitPoints = frag.getHitPoints();
+    this->_energyPoints = scav.getEnergyPoints();
+    this->_attackDamage = frag.getAttackDamage();
     std::cout << GREEN << "✓ DiamondTrap default constructor called" << RESET << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const std::string &name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name), _name(name) {
-    this->_hitPoints = FragTrap::_hitPoints;
-    this->_energyPoints = ScavTrap::_energyPoints;
-    this->_attackDamage = FragTrap::_attackDamage;
+    FragTrap frag;
+    ScavTrap scav;
+    this->_hitPoints = frag.getHitPoints();
+    this->_energyPoints = scav.getEnergyPoints();
+    this->_attackDamage = frag.getAttackDamage();
     std::cout << GREEN << "✓ DiamondTrap " << this->_name << " constructor called" << RESET << std::endl;
 }
 
