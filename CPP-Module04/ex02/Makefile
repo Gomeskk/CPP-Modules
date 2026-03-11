@@ -13,10 +13,10 @@ MAGENTA = \033[35m
 # Variables
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
-NAME = 
+NAME = AbstractClass
 OBJ_DIR = objs
 
-SRCS = main.cpp 
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJS = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Rules
